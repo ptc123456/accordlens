@@ -2,7 +2,7 @@
 
 Public source snapshot: `5d85cda60bbf8184d68f406d061e1caa4f329166`; tree `e2ed9716af24c9cb43088e02f5d1fa0b2a8eb723`. The release contract, frontend source, fixtures, documentation and Explorer assets are available from this clean public history.
 
-The release contract passed a fresh Studio Dev matrix on chain `61997`. All 45 retained transactions have unique hashes, finalized with `MAJORITY_AGREE`, and match their expected semantic execution result.
+The release contract passed a fresh Studio Dev matrix on chain `61997`. All 45 retained transactions have unique hashes, finalized with `MAJORITY_AGREE`, and match their expected semantic execution result. The complete public transaction, actor, execution and readback ledger is available in [STUDIO-MATRIX.md](STUDIO-MATRIX.md).
 
 ## Verified journeys
 
@@ -14,7 +14,7 @@ The release contract passed a fresh Studio Dev matrix on chain `61997`. All 45 r
 
 Expected execution errors were limited to authorization, wrong-state, replay and revision-mismatch cases; authoritative readbacks proved unchanged state after each rejection. The final live proposals cover `ACTIVATED / COMPATIBLE`, `ACTIVATED / CONDITIONAL`, `REJECTED / INCOMPATIBLE`, retryable `LOCKED / UNRESOLVED`, and `EXPIRED`.
 
-The public application is bound only to `0xa687ba36bc5457b40e9F3b1Ed6AE167914F6AAF7`. Local unit, contract, type, build and dependency checks were rerun on the runtime release: frontend 38/38 PASS; contract/pure 74 PASS with four disclosed stale Direct Mode lifecycle tests not counted as passing; TypeScript, build, lint/schema, pip check and npm production audit PASS.
+The public application is bound only to `0xa687ba36bc5457b40e9F3b1Ed6AE167914F6AAF7`. Exact local results are: `npm test -- --run` — 38/38 PASS; `py -3.13 -m pytest tests -q -p no:cacheprovider` — 74 PASS and four disclosed Direct Mode loader failures; `py -3.13 -m pytest probes -q -p no:cacheprovider` — 33/33 PASS. The four failures are not counted as passing. TypeScript, build, lint/schema, pip check and npm production audit PASS.
 
 The public Vercel journey is recorded in [VERCEL-E2E.md](VERCEL-E2E.md). Proposal 7 completed a fresh independent-wallet compatible lifecycle through activation, retained every consequential transaction hash, reconciled pending state without replay, returned to disconnected state after reload and remained publicly readable.
 

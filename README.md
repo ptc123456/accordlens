@@ -8,7 +8,7 @@ AccordLens is a GenLayer compatibility council that binds a protocol change to i
 - **Network:** GenLayer Studio Devnet, chain ID `61997`
 - **Deployment:** [`0xc13aaf…84902`](https://explorer-studio-dev.genlayer.com/transactions/0xc13aaf59455cf92fb15b0b218793df174fb7a67131c3433c449b0a2f56784902)
 - **Application:** [accordlens.vercel.app](https://accordlens.vercel.app)
-- **Evidence:** [verification record](docs/VERIFICATION.md) · [deployment identity](docs/DEPLOYMENT.md) · [live Vercel E2E](docs/VERCEL-E2E.md) · [submission scorecard](docs/SCORECARD.md)
+- **Evidence:** [verification record](docs/VERIFICATION.md) · [Studio matrix](docs/STUDIO-MATRIX.md) · [deployment identity](docs/DEPLOYMENT.md) · [live Vercel E2E](docs/VERCEL-E2E.md) · [submission scorecard](docs/SCORECARD.md)
 
 ## The trust problem
 
@@ -67,10 +67,11 @@ npm run typecheck
 npm run build
 npm audit --omit=dev
 python -m pytest tests -q -p no:cacheprovider
+python -m pytest probes -q -p no:cacheprovider
 genvm-lint check contracts/accordlens.py
 ```
 
-Current exact-release results: frontend `38/38` PASS; contract/pure suite `74` PASS with four disclosed Direct Mode lifecycle tests not counted as passing; TypeScript, production build, lint/schema, pip check and npm production audit PASS. The four harness-blocked lifecycle cases are covered by the current contract's live Studio matrix: 45 unique finalized transactions across compatible, conditional remediation, incompatible, unresolved/retry, expiry, authorization, replay and bounded-read paths. A separate public Vercel journey completed proposal 7 from creation through `ACTIVATED / COMPATIBLE`. See [verification evidence](docs/VERIFICATION.md).
+Current exact-release results: frontend `38/38` PASS; `tests` suite `74` PASS with four disclosed Direct Mode loader failures not counted as passing; `probes` suite `33/33` PASS; TypeScript, production build, lint/schema, pip check and npm production audit PASS. The four harness-blocked lifecycle cases are covered by the current contract's [public Studio matrix](docs/STUDIO-MATRIX.md): 45 unique finalized transactions across compatible, conditional remediation, incompatible, unresolved/retry, expiry, authorization, replay and bounded-read paths. A separate public Vercel journey completed proposal 7 from creation through `ACTIVATED / COMPATIBLE`. See [verification evidence](docs/VERIFICATION.md).
 
 ## Security boundaries
 
