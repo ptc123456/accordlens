@@ -7,8 +7,8 @@ AccordLens was tested from the public production application against the frozen 
 - Public application: `https://accordlens.vercel.app`
 - Vercel deployment: `dpl_C56ZYEUeeyp93P7JrkbWVGDSwvqq`
 - Deployment URL: `https://accordlens-64qcm0ws6-shingg.vercel.app`
-- Runtime commit: `fa9168369d06e9bfa696f04c3028ceaf3bd266c6`
-- Runtime tree: `c8f5be2e690871437055749880cd6b81fb256302`
+- Public source snapshot: `5d85cda60bbf8184d68f406d061e1caa4f329166`
+- Source tree: `e2ed9716af24c9cb43088e02f5d1fa0b2a8eb723`
 - Live bundle: `/assets/index-BIbCgchR.js`
 - Live/local bundle SHA-256: `B8EF0D287EAAF50B1F801197CEB07EB9D06369C2A0F4BD517491A6824F28FDF6`
 - Contract: `0xa687ba36bc5457b40e9F3b1Ed6AE167914F6AAF7`

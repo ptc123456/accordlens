@@ -1,6 +1,6 @@
 # Verification
 
-Runtime release commit: `fa9168369d06e9bfa696f04c3028ceaf3bd266c6`; tree `c8f5be2e690871437055749880cd6b81fb256302`. Later commits add public documentation and Explorer assets without changing the contract, frontend runtime, dependencies, configuration, or production bundle.
+Public source snapshot: `5d85cda60bbf8184d68f406d061e1caa4f329166`; tree `e2ed9716af24c9cb43088e02f5d1fa0b2a8eb723`. The release contract, frontend source, fixtures, documentation and Explorer assets are available from this clean public history.
 
 The release contract passed a fresh Studio Dev matrix on chain `61997`. All 45 retained transactions have unique hashes, finalized with `MAJORITY_AGREE`, and match their expected semantic execution result.
 
