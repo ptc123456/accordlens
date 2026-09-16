@@ -16,10 +16,8 @@ The deployment finalized with `MAJORITY_AGREE`, leader execution `SUCCESS`, and 
 
 - URL: `https://accordlens.vercel.app`
 - Public source snapshot: `5d85cda60bbf8184d68f406d061e1caa4f329166`
-- Current production deployment: `dpl_6qsBEmRvFgT61z7CfWxfuZ1vYcQ1`
-- Current immutable deployment URL: `https://accordlens-f88gu30et-shingg.vercel.app`
 - Status: `READY`
 - Runtime bundle: `/assets/index-BIbCgchR.js`
 - Bundle SHA-256: `B8EF0D287EAAF50B1F801197CEB07EB9D06369C2A0F4BD517491A6824F28FDF6`
 
-The stable URL is the public judge-facing entry point. The immutable deployment URL identifies the current production deployment and may be subject to the owner's Vercel access policy. The wallet E2E was executed on deployment `dpl_C56ZYEUeeyp93P7JrkbWVGDSwvqq`; its application bundle is byte-identical to the current deployment, as recorded in [VERCEL-E2E.md](VERCEL-E2E.md).
+The stable URL and bundle digest are the public release identity. The wallet E2E was executed on deployment `dpl_C56ZYEUeeyp93P7JrkbWVGDSwvqq`; its application bundle is byte-identical to the bundle currently served by the stable URL, as recorded in [VERCEL-E2E.md](VERCEL-E2E.md).

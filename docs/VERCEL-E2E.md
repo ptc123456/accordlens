@@ -7,8 +7,6 @@ AccordLens was tested from the public production application against the frozen 
 - Public application: `https://accordlens.vercel.app`
 - E2E-tested deployment: `dpl_C56ZYEUeeyp93P7JrkbWVGDSwvqq`
 - E2E-tested deployment URL: `https://accordlens-64qcm0ws6-shingg.vercel.app`
-- Current production deployment: `dpl_6qsBEmRvFgT61z7CfWxfuZ1vYcQ1`
-- Current production URL: `https://accordlens-f88gu30et-shingg.vercel.app`
 - Public source snapshot: `5d85cda60bbf8184d68f406d061e1caa4f329166`
 - Source tree: `e2ed9716af24c9cb43088e02f5d1fa0b2a8eb723`
 - Live bundle: `/assets/index-BIbCgchR.js`
@@ -38,7 +36,7 @@ Every transaction above finalized with semantic execution success and consensus 
 - `/`, `/council`, and `/how-it-works` loaded from the public alias with coherent navigation and only the current contract identity.
 - The wallet chooser used the selected EIP-6963 OKX provider; application writes came from the independent wallet account, not the Studio deployer.
 - Production returned HTTP `200`; the deployment was independently reported `READY` by Vercel.
-- The current production deployment serves the same `/assets/index-BIbCgchR.js` bundle; both the E2E-tested and current public bundles have SHA-256 `B8EF0D287EAAF50B1F801197CEB07EB9D06369C2A0F4BD517491A6824F28FDF6`.
+- The stable public URL serves the same `/assets/index-BIbCgchR.js` bundle tested above, with SHA-256 `B8EF0D287EAAF50B1F801197CEB07EB9D06369C2A0F4BD517491A6824F28FDF6`.
 
 ## Fresh release checks
 
