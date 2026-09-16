@@ -1,0 +1,8 @@
+probes/whole_input_probe.py -text whitespace=cr-at-eol
+probes/narrowed_evidence_probe.py -text whitespace=cr-at-eol
+probes/quote_evidence_probe.py -text whitespace=cr-at-eol
+probes/max_envelope_probe.py -text
+probes/test_max_envelope_probe.py -text
+contracts/accordlens.py text eol=lf
+fixtures/studio/*.json text eol=lf
+fixtures/studio/**/*.md text eol=lf

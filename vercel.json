@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/council", "destination": "/index.html" },
+    { "source": "/how-it-works", "destination": "/index.html" }
+  ]
+}

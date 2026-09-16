@@ -1,0 +1,709 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Immutable Studio Dev preview fixture and operation oracle",
+  "network": {
+    "name": "Studio Dev preview",
+    "chainId": 61997,
+    "rpc": "https://studio-dev.genlayer.com/api"
+  },
+  "immutableFixtureRevision": "be4f0812c0b8b163270206f9aa37ecdaec614f55",
+  "immutableFixtureTree": "0ad4198811d3158e5319dbf8dcc18351083ebb6d",
+  "repository": "https://github.com/ptc123456/accordlens",
+  "actors": {
+    "A": "0x91E97c32289af6c135f025Ad9957F8b2830daeA1",
+    "B": "0x17375DbD58B93746C7fa7693F93c7Beb75364161",
+    "C": "0xA6c02a3d7D429629FaCd23A07b8A3d731628Ee99"
+  },
+  "deadlines": {
+    "normal": 1893456000,
+    "expiry": {
+      "derivation": "authoritative chain timestamp + 120 seconds",
+      "rule": "read once immediately before T39; persist exact timestamp and deadline before the single broadcast"
+    }
+  },
+  "conditionOracle": {
+    "c-b": {
+      "verdict": "CONDITIONAL",
+      "action_type": "CONFIG_UPDATE",
+      "target": "endpoint",
+      "required_value": "/v2/check"
+    },
+    "c-c": {
+      "verdict": "CONDITIONAL",
+      "action_type": "CONFIG_UPDATE",
+      "target": "response_mode",
+      "required_value": "compact"
+    }
+  },
+  "files": [
+    {
+      "path": "fixtures/studio/closure-exception/change.md",
+      "blobOid": "ec497d65dacd43f643f7cc151ea83c1ad109201f",
+      "sha256": "75950d37f2fadd7451d995f64563a6f5b3fe8cc797e781ea625c5f2753a5ea24",
+      "bytes": 421,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/closure-exception/change.md"
+    },
+    {
+      "path": "fixtures/studio/closure-exception/constraint.md",
+      "blobOid": "6bad31a6e02dd4d1dcce9c0e2f619b952af2acc4",
+      "sha256": "cd81d5956e8b72437f73dbf0d7e3b98c56af35e7c76e569aaf9f83c855e43719",
+      "bytes": 240,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/closure-exception/constraint.md"
+    },
+    {
+      "path": "fixtures/studio/closure-overflow/change.md",
+      "blobOid": "b207ad8847c07fc5b45af14306ad4c6b9040afb2",
+      "sha256": "839f5da0d3d97398fb2581557a2e0f99e960513947e0f130343fc6f6053a6b1a",
+      "bytes": 5063,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/closure-overflow/change.md"
+    },
+    {
+      "path": "fixtures/studio/closure-overflow/constraint.md",
+      "blobOid": "f291ec9c0abbd5abed1161382e8f9cd134792308",
+      "sha256": "82c2f312bb829525b6f5f3dac55e547c7d8e6e0acfbb7c1986384e711fcf2e71",
+      "bytes": 247,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/closure-overflow/constraint.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/change.md",
+      "blobOid": "3bdc4a0cc7b4d52b9e6b5e9c538b1e9fea940d1e",
+      "sha256": "c8ee85066a9b0182b0d1f9514ff66ee6e256cec2fad0af78d44f9065a575a4c3",
+      "bytes": 203,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/change.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/constraint-01.md",
+      "blobOid": "ee3be5bf20a961ba9bee7abea6cafcd1aab5a55d",
+      "sha256": "bb39d09eb8dea0e4ac5e954a314816b101f7d627ee80957994f8587e92ccb763",
+      "bytes": 184,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-01.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/constraint-02.md",
+      "blobOid": "b7cc7d7b4724f7c2ab94962118e10b45c7081aa3",
+      "sha256": "21de806590684b54fe26a2587f996e19aa5a3bfb586f88b48fa547c4c476297a",
+      "bytes": 189,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-02.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/constraint-03.md",
+      "blobOid": "52f47736dd7ff4903011f84147e03cd6a58063d3",
+      "sha256": "384e4d8dbdea9a1323b192a7959f68a88e1729dba7bc47a4d23556ee573c8e15",
+      "bytes": 176,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-03.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/constraint-04.md",
+      "blobOid": "2fef94d73f0894be5cf7c1532717a4f46a68a923",
+      "sha256": "2af4fff1c0b2cafd3f51875d58a0de6c1cc632727db87b6e6b4a1667ad6aa769",
+      "bytes": 164,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-04.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/constraint-05.md",
+      "blobOid": "4b84208b7a1d1323a3055ec94767b0d58b2a7fb2",
+      "sha256": "3ee678f409f50bc654e120f2deab30bf49040996d55a2f56761eb391d0758e83",
+      "bytes": 157,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-05.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/constraint-06.md",
+      "blobOid": "98825fff197498e776bf018d36660b9cc36951f8",
+      "sha256": "eb8d0db164f8d23d272e1e1d4e1b6a4c651665383cba1a6f1e4decde41f5d4ec",
+      "bytes": 181,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-06.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/constraint-07.md",
+      "blobOid": "74b60905d8ea3e336e67f585a6318560903cc0d5",
+      "sha256": "61b52d784024f5fe447a02d7875403d4300f399614568ad2da252b15ecc7718c",
+      "bytes": 181,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-07.md"
+    },
+    {
+      "path": "fixtures/studio/compatible/constraint-08.md",
+      "blobOid": "1c9cb9665a63b2b5cccfca2e5f3d9bc77536ddc4",
+      "sha256": "c67ca3abea6b3f18131ef1c59404ce87c51c99a2d079fae3f5ca1827b9b9a0e2",
+      "bytes": 169,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-08.md"
+    },
+    {
+      "path": "fixtures/studio/conditional/change.md",
+      "blobOid": "f5b61d9c37ceae53e7bc47ddcbb75b6134cebed3",
+      "sha256": "86b0d81e808e10984a0ed676074ad0b8219a24c97a40aca5e6e12cd5badfbabf",
+      "bytes": 648,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/change.md"
+    },
+    {
+      "path": "fixtures/studio/conditional/constraint-b.md",
+      "blobOid": "afcf904444955430c275f684467a8e6caebbdae3",
+      "sha256": "ff20961c3769de3e0c089f8c23868b7f4c300f73ccd894ba881e83c52688735b",
+      "bytes": 450,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/constraint-b.md"
+    },
+    {
+      "path": "fixtures/studio/conditional/constraint-c.md",
+      "blobOid": "4e1aa6a72593c5cd036bbd07a90d0d6c81a6a024",
+      "sha256": "7602e4a7d61b23bd68ccb4538a2f39634bad38b5c8fcf9d7939f836ef8e0a4d6",
+      "bytes": 444,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/constraint-c.md"
+    },
+    {
+      "path": "fixtures/studio/conditional/remediation-b.md",
+      "blobOid": "e0417fcfa5a1561febb8913913f2348a0db70452",
+      "sha256": "e61fb81a7e736276a1df52542a4bfeb812a4af584df8b928ffc8a330b6f35b9d",
+      "bytes": 183,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/remediation-b.md"
+    },
+    {
+      "path": "fixtures/studio/conditional/remediation-c.md",
+      "blobOid": "fa79d84c87120b68eb6ca789dba41bb56d9fec98",
+      "sha256": "482c50ba7f426c64937105e9d003e52dc5df346af40a39b45af11fe295b1fe40",
+      "bytes": 159,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/remediation-c.md"
+    },
+    {
+      "path": "fixtures/studio/conditional/remediation-incomplete.md",
+      "blobOid": "8f904723e8bdcc8b521b5471f635985e03ae3553",
+      "sha256": "f350597c39993ce36e4e4b16712beb10658253e673e34208fd54acbdce3f50b3",
+      "bytes": 174,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/remediation-incomplete.md"
+    },
+    {
+      "path": "fixtures/studio/expiry/change.md",
+      "blobOid": "4c6e47c33c98ce19d4a45a5f9bb4ab64963db5ec",
+      "sha256": "1172794f5b98b83df1b9f7e48658d966299c11528f810249d247ec59ed200c19",
+      "bytes": 146,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/expiry/change.md"
+    },
+    {
+      "path": "fixtures/studio/incompatible/change.md",
+      "blobOid": "55a43c861a4ca80cf1c7393f819d5f719b73e60f",
+      "sha256": "5f3f3cc1756aa6d5b75e455472822854bab5104d670ca387683dda8be2520d38",
+      "bytes": 172,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/incompatible/change.md"
+    },
+    {
+      "path": "fixtures/studio/incompatible/constraint.md",
+      "blobOid": "2e33dce86310eab4eb6b2a72c401f8543cdadfbd",
+      "sha256": "ecd5c419a769901ea37bd10c5ff3563cd9af50c1d93684b09354a372a5582680",
+      "bytes": 270,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/incompatible/constraint.md"
+    },
+    {
+      "path": "fixtures/studio/unresolved/change.md",
+      "blobOid": "38fafedcae3409d7a2821c25e9472b24acebbdb3",
+      "sha256": "b672297582a6861724dd1c2c29beffadad23419575e660e116fe0b74c9fae834",
+      "bytes": 284,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/unresolved/change.md"
+    },
+    {
+      "path": "fixtures/studio/unresolved/constraint.md",
+      "blobOid": "00c90dcee7f34abfdd699ca2b8615a2b1c097fee",
+      "sha256": "d9b4363d81c8aec2883ce677e98fce9ae5125d3067527c897b2425e0f445cf82",
+      "bytes": 220,
+      "url": "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/unresolved/constraint.md"
+    }
+  ],
+  "proposalRefs": "$K,$Cnd,$I,$U,$X,$H,$O are replaced only by IDs from finalized authoritative creation readbacks.",
+  "operations": [
+    {
+      "id": "T01",
+      "actor": "A",
+      "method": "deploy",
+      "args": [
+        "contracts/accordlens.py",
+        "constructor:none"
+      ],
+      "oracle": "FINALIZED; semantic SUCCESS; zero counts"
+    },
+    {
+      "id": "T02",
+      "actor": "A",
+      "method": "create_change",
+      "args": [
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/change.md",
+        "be4f0812c0b8b163270206f9aa37ecdaec614f55",
+        "1893456000"
+      ],
+      "oracle": "new K proposal DRAFT"
+    },
+    {
+      "id": "T03",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-01",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-01.md"
+      ],
+      "oracle": "count 1"
+    },
+    {
+      "id": "T04",
+      "actor": "C",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-02",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-02.md"
+      ],
+      "oracle": "count 2"
+    },
+    {
+      "id": "T05",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-03",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-03.md"
+      ],
+      "oracle": "count 3"
+    },
+    {
+      "id": "T06",
+      "actor": "C",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-04",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-04.md"
+      ],
+      "oracle": "count 4"
+    },
+    {
+      "id": "T07",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-05",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-05.md"
+      ],
+      "oracle": "count 5"
+    },
+    {
+      "id": "T08",
+      "actor": "C",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-06",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-06.md"
+      ],
+      "oracle": "count 6"
+    },
+    {
+      "id": "T09",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-07",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-07.md"
+      ],
+      "oracle": "count 7"
+    },
+    {
+      "id": "T10",
+      "actor": "C",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-08",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-08.md"
+      ],
+      "oracle": "count 8"
+    },
+    {
+      "id": "T11",
+      "actor": "B",
+      "method": "lock_dependency_graph",
+      "args": [
+        "$K"
+      ],
+      "oracle": "ERROR NOT_MAINTAINER; unchanged DRAFT"
+    },
+    {
+      "id": "T12",
+      "actor": "A",
+      "method": "lock_dependency_graph",
+      "args": [
+        "$K"
+      ],
+      "oracle": "LOCKED; eight consumers"
+    },
+    {
+      "id": "T13",
+      "actor": "C",
+      "method": "register_dependency",
+      "args": [
+        "$K",
+        "c-extra",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/constraint-01.md"
+      ],
+      "oracle": "ERROR WRONG_STATE; graph unchanged"
+    },
+    {
+      "id": "T14",
+      "actor": "A",
+      "method": "evaluate_compatibility",
+      "args": [
+        "$K"
+      ],
+      "oracle": "COMPATIBLE; ACTIVATABLE"
+    },
+    {
+      "id": "T15",
+      "actor": "A",
+      "method": "activate_change",
+      "args": [
+        "$K"
+      ],
+      "oracle": "ACTIVATED"
+    },
+    {
+      "id": "T16",
+      "actor": "A",
+      "method": "activate_change",
+      "args": [
+        "$K"
+      ],
+      "oracle": "ERROR WRONG_STATE; unchanged ACTIVATED"
+    },
+    {
+      "id": "T17",
+      "actor": "A",
+      "method": "create_change",
+      "args": [
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/change.md",
+        "be4f0812c0b8b163270206f9aa37ecdaec614f55",
+        "1893456000"
+      ],
+      "oracle": "new Cnd proposal DRAFT"
+    },
+    {
+      "id": "T18",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$Cnd",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/constraint-b.md"
+      ],
+      "oracle": "owner B"
+    },
+    {
+      "id": "T19",
+      "actor": "C",
+      "method": "register_dependency",
+      "args": [
+        "$Cnd",
+        "c-c",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/constraint-c.md"
+      ],
+      "oracle": "owner C"
+    },
+    {
+      "id": "T20",
+      "actor": "A",
+      "method": "lock_dependency_graph",
+      "args": [
+        "$Cnd"
+      ],
+      "oracle": "LOCKED"
+    },
+    {
+      "id": "T21",
+      "actor": "A",
+      "method": "evaluate_compatibility",
+      "args": [
+        "$Cnd"
+      ],
+      "oracle": "CONDITIONAL; REMEDIATION; two distinct conditions"
+    },
+    {
+      "id": "T22",
+      "actor": "A",
+      "method": "acknowledge_condition",
+      "args": [
+        "$Cnd",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/remediation-b.md"
+      ],
+      "oracle": "ERROR NOT_CONSUMER_OWNER; unchanged"
+    },
+    {
+      "id": "T23",
+      "actor": "B",
+      "method": "acknowledge_condition",
+      "args": [
+        "$Cnd",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/remediation-incomplete.md"
+      ],
+      "oracle": "false; acknowledgement count 0"
+    },
+    {
+      "id": "T24",
+      "actor": "B",
+      "method": "acknowledge_condition",
+      "args": [
+        "$Cnd",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/remediation-b.md"
+      ],
+      "oracle": "true; count 1"
+    },
+    {
+      "id": "T25",
+      "actor": "B",
+      "method": "acknowledge_condition",
+      "args": [
+        "$Cnd",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/remediation-b.md"
+      ],
+      "oracle": "ERROR REPLAY_REJECTED; acknowledgement count 1 unchanged"
+    },
+    {
+      "id": "T26",
+      "actor": "C",
+      "method": "acknowledge_condition",
+      "args": [
+        "$Cnd",
+        "c-c",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/conditional/remediation-c.md"
+      ],
+      "oracle": "true; ACTIVATABLE"
+    },
+    {
+      "id": "T27",
+      "actor": "A",
+      "method": "activate_change",
+      "args": [
+        "$Cnd"
+      ],
+      "oracle": "ACTIVATED"
+    },
+    {
+      "id": "T28",
+      "actor": "A",
+      "method": "create_change",
+      "args": [
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/incompatible/change.md",
+        "be4f0812c0b8b163270206f9aa37ecdaec614f55",
+        "1893456000"
+      ],
+      "oracle": "new I proposal DRAFT"
+    },
+    {
+      "id": "T29",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$I",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/incompatible/constraint.md"
+      ],
+      "oracle": "owner B"
+    },
+    {
+      "id": "T30",
+      "actor": "A",
+      "method": "lock_dependency_graph",
+      "args": [
+        "$I"
+      ],
+      "oracle": "LOCKED"
+    },
+    {
+      "id": "T31",
+      "actor": "A",
+      "method": "evaluate_compatibility",
+      "args": [
+        "$I"
+      ],
+      "oracle": "INCOMPATIBLE; REJECTED"
+    },
+    {
+      "id": "T32",
+      "actor": "A",
+      "method": "activate_change",
+      "args": [
+        "$I"
+      ],
+      "oracle": "ERROR WRONG_STATE; unchanged REJECTED"
+    },
+    {
+      "id": "T33",
+      "actor": "A",
+      "method": "create_change",
+      "args": [
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/unresolved/change.md",
+        "be4f0812c0b8b163270206f9aa37ecdaec614f55",
+        "1893456000"
+      ],
+      "oracle": "new U proposal DRAFT"
+    },
+    {
+      "id": "T34",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$U",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/unresolved/constraint.md"
+      ],
+      "oracle": "owner B"
+    },
+    {
+      "id": "T35",
+      "actor": "A",
+      "method": "lock_dependency_graph",
+      "args": [
+        "$U"
+      ],
+      "oracle": "LOCKED"
+    },
+    {
+      "id": "T36",
+      "actor": "A",
+      "method": "evaluate_compatibility",
+      "args": [
+        "$U"
+      ],
+      "oracle": "UNRESOLVED; LOCKED; attempt 1"
+    },
+    {
+      "id": "T37",
+      "actor": "B",
+      "method": "evaluate_compatibility",
+      "args": [
+        "$U"
+      ],
+      "oracle": "UNRESOLVED; LOCKED; attempt 2"
+    },
+    {
+      "id": "T38",
+      "actor": "A",
+      "method": "create_change",
+      "args": [
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/compatible/change.md",
+        "b2adb311b2d0f086af7f8b88e096c09dcb97bf20",
+        "1893456000"
+      ],
+      "oracle": "ERROR REVISION_MISMATCH; count unchanged"
+    },
+    {
+      "id": "T39",
+      "actor": "A",
+      "method": "create_change",
+      "args": [
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/expiry/change.md",
+        "be4f0812c0b8b163270206f9aa37ecdaec614f55",
+        "$CHAIN_TIMESTAMP_PLUS_120"
+      ],
+      "oracle": "new X DRAFT; derive once from authoritative chain timestamp and record exact value before broadcast"
+    },
+    {
+      "id": "T40",
+      "actor": "B",
+      "method": "expire_change",
+      "args": [
+        "$X"
+      ],
+      "oracle": "after timestamp > recorded deadline: EXPIRED"
+    },
+    {
+      "id": "T41",
+      "actor": "A",
+      "method": "create_change",
+      "args": [
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/closure-exception/change.md",
+        "be4f0812c0b8b163270206f9aa37ecdaec614f55",
+        "1893456000"
+      ],
+      "oracle": "new H proposal DRAFT"
+    },
+    {
+      "id": "T42",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$H",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/closure-exception/constraint.md"
+      ],
+      "oracle": "owner B"
+    },
+    {
+      "id": "T43",
+      "actor": "A",
+      "method": "lock_dependency_graph",
+      "args": [
+        "$H"
+      ],
+      "oracle": "LOCKED"
+    },
+    {
+      "id": "T44",
+      "actor": "A",
+      "method": "evaluate_compatibility",
+      "args": [
+        "$H"
+      ],
+      "oracle": "INCOMPATIBLE; REJECTED; mandatory exception included"
+    },
+    {
+      "id": "T45",
+      "actor": "A",
+      "method": "create_change",
+      "args": [
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/closure-overflow/change.md",
+        "be4f0812c0b8b163270206f9aa37ecdaec614f55",
+        "1893456000"
+      ],
+      "oracle": "new O proposal DRAFT"
+    },
+    {
+      "id": "T46",
+      "actor": "B",
+      "method": "register_dependency",
+      "args": [
+        "$O",
+        "c-b",
+        "https://raw.githubusercontent.com/ptc123456/accordlens/be4f0812c0b8b163270206f9aa37ecdaec614f55/fixtures/studio/closure-overflow/constraint.md"
+      ],
+      "oracle": "owner B"
+    },
+    {
+      "id": "T47",
+      "actor": "A",
+      "method": "lock_dependency_graph",
+      "args": [
+        "$O"
+      ],
+      "oracle": "LOCKED"
+    },
+    {
+      "id": "T48",
+      "actor": "A",
+      "method": "evaluate_compatibility",
+      "args": [
+        "$O"
+      ],
+      "oracle": "UNRESOLVED/EVIDENCE_CLOSURE; LOCKED; no cropped verdict"
+    },
+    {
+      "id": "T49",
+      "actor": "original evaluator",
+      "method": "evaluate_compatibility",
+      "args": [
+        "$Cnd"
+      ],
+      "oracle": "reserve only after reconciled consensus disagreement; otherwise NOT_EXECUTED"
+    }
+  ]
+}

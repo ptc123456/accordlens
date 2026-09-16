@@ -1,0 +1,102 @@
+.docs {
+  max-width: 900px;
+  margin: 11vh auto 0;
+}
+
+.docs h1 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: 1;
+  letter-spacing: -.065em;
+}
+
+.docs section {
+  display: grid;
+  grid-template-columns: minmax(180px, .55fr) 1fr;
+  gap: 40px;
+  padding: 28px 0;
+  border-top: 1px solid #46606766;
+}
+
+.docs h2 { margin: 0; font-size: 18px; letter-spacing: -.03em; }
+.docs section p, .docs aside p { margin: 0; color: #9bb0b3; line-height: 1.75; }
+.docs aside { margin-top: 28px; padding: 24px; border: 1px solid #4f777c66; background: #0b2026; }
+.docs aside strong { display: block; margin-bottom: 10px; color: #8ee9e7; }
+
+@media (max-width: 800px) {
+  .docs { margin-top: 8vh; }
+  .docs section { grid-template-columns: 1fr; gap: 10px; }
+}
+.accordlens-mark {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  object-fit: contain;
+  clip-path: none;
+  background: transparent !important;
+  filter: drop-shadow(0 5px 8px #011a225c);
+}
+
+.council .accordlens-mark { filter: none; }
+
+/* A quiet horizon frames the AccordLens sculpture. */
+.home .beacon {
+  height: 480px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: linear-gradient(180deg, #14272f 0%, #24444c 48%, #b68772 79%, #20383e 80%, #071419 100%);
+}
+.home .top-link { display: inline-flex; align-items: center; min-height: 44px; }
+.home .beacon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 76%, #e9c7a58c, transparent 53%);
+}
+.portal {
+  position: relative;
+  z-index: 1;
+  width: 46%;
+  height: 68%;
+  display: grid;
+  place-items: center;
+  border: 26px solid #172b34;
+  border-bottom: 0;
+  border-radius: 45% 45% 0 0;
+  box-shadow: 18px 0 35px #04171c88, inset 0 0 35px #edc9a65c;
+}
+.portal .accordlens-mark {
+  width: 160px;
+  height: 160px;
+  transform: none;
+  filter: drop-shadow(0 0 20px #f3d7bd);
+}
+.horizon {
+  position: absolute;
+  inset: 79% 0 0;
+  background: linear-gradient(180deg, #e4b39455, #071419 87%);
+  border-top: 1px solid #efc4a887;
+}
+@media (max-width: 800px) {
+  .home .beacon { height: 300px; }
+  .portal { border-width: 18px; }
+  .portal .accordlens-mark { width: 104px; height: 104px; }
+}
+
+@media (max-width: 420px) {
+  .home .brand small { display: none; }
+  .home .brand { gap: 9px; }
+  .home .top-link { white-space: nowrap; }
+}
+
+.tx-phase, .tx-links { display: flex; align-items: center; gap: 10px; }
+.tx-spinner { width: 18px; height: 18px; flex: 0 0 auto; border: 2px solid #8dc8c6; border-top-color: #0b7779; border-radius: 50%; animation: tx-spin .8s linear infinite; }
+.tx-links { flex-wrap: wrap; }
+.tx-links code { min-width: 0; flex: 1 1 260px; }
+.tx-links button, .tx-links a { border: 1px solid #a9c5c8; border-radius: 4px; background: #fff; color: #0c5f64; padding: 7px 9px; font: 500 10px 'DM Mono', monospace; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #56cfd0; outline-offset: 3px; }
+@keyframes tx-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .tx-spinner { animation: none; border-top-color: #0b7779; } }

@@ -1,0 +1,5 @@
+.tx-phase{display:flex;align-items:center;gap:9px}
+.tx-spinner{width:14px;height:14px;flex:none;border:2px solid #9dcfc9;border-top-color:#0c7f84;border-radius:50%;animation:tx-turn .8s linear infinite}
+@keyframes tx-turn{to{transform:rotate(360deg)}}
+.create-form select{width:100%;border:1px solid #bfd1d4;border-radius:5px;padding:13px;background:#fbfefe;color:#0b2026;margin-top:7px}
+@media(prefers-reduced-motion:reduce){.tx-spinner{animation:none}}
