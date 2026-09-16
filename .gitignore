@@ -5,8 +5,3 @@ node_modules/
 .env*
 .vercel/
 dist/
-docs/preflight/
-docs/planning/
-docs/RPC-BUDGET.md
-AGENTS.md
-CLAUDE.md
